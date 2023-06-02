@@ -4,8 +4,7 @@ import const
 
 class Dice:
     def __init__(self):
-        self.__dice = [0, 0]
-        self.__statement = [0, 0]
+        self.__dice = [0,0]
 
     def __str__(self):
         return "%d %d" % (self.__dice[0], self.__dice[1])
@@ -37,10 +36,3 @@ class Dice:
     
     def set_dice(self, dice):
         self.__dice = dice
-
-    def get_statement(self):
-        return self.__statement
-    
-    def set_statement(self, dice):
-        self.__statement = dice
-
