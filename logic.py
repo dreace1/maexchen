@@ -15,8 +15,13 @@ class Logic:
         print(self.__current_dice)
         
     def reveal(self):
-        print("Statement was: %d %d" % (self.__statement_dice[0], self.__statement_dice[1]))
-        print(" but dice are:" % (self.__current_dice[0], self.__current_dice[1]))
+        print("Statement was: ", self.__statement_dice)
+        print(" Dice roll is: ", self.__current_dice)
+
+        if self.__statement_dice.get_value() == self.__current_dice.get_value():
+            print("You lose!")
+        else:
+            print("You win!")
 
     def get_last_dice(self):
         return self.__last_dice
