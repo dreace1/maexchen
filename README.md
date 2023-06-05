@@ -16,10 +16,10 @@ cd maexchen
 ```
 
 ## Dokumentation (German):
-Als Projekt wurde von uns das Würfelspiel [Maexchen](https://de.wikipedia.org/wiki/Mäxchen) ausgewählt. <br>
+Als Projekt wurde von uns das Würfelspiel [Maexchen](https://de.wikipedia.org/wiki/Mäxchen) ausgewählt.
 
 ### Durchführung
-Wir haben uns dazu entschieden, mit der pygame Library zu arbeiten, da diese bereits viele Funktionen bietet um Spiele in python zu Implementieren. <br>
+Wir haben uns dazu entschieden, mit der pygame Library zu arbeiten, da diese bereits viele Funktionen bietet um Spiele in python zu Implementieren.
 
 ### Aufteilung
 Wir haben das Projekt in Frontend und Backend aufgeteilt. Dabei hat sich Hannes um das Frontend gekümmert und Leon um das Backend.
