@@ -33,7 +33,8 @@ Wenn man das Spiel startet landet man direkt im Spiel, um zu Würfeln muss die L
 ### ToDo
 - Frontend mit Backend verbinden
 - Spiel starten Menu mit Spieler wahl (Name usw.)
+- Highscore Liste -> DB Anbindung/JSON Datei
 - Refactoring
-- Spiel Flow: Runden, Wechsel des Spielers
+- Spiel Flow: Runden, Wechsel des Spielers, Punktevergabe, Gewinner
 - Animation des Würfelns ggf. noch verbessern
 - Unit Testing
