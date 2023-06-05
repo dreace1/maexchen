@@ -25,7 +25,7 @@ class Maexchen():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     self.screen.blit(self.background_image, (0, 0))
-                    self.dice.roll2(self.screen)
+                    self.dice.roll(self.screen)
         return True
 
     def update(self):
@@ -37,8 +37,14 @@ class Maexchen():
         pygame.display.update()
 
     def blit_dice(self):
-        dice_image = self.dice.determine_dice()
-        self.screen.blit(dice_image, (const.GAME_WIDTH / 2 - dice_image.get_width() / 2, const.GAME_HEIGHT / 2 - dice_image.get_height() / 2))
+        first_dice_image = self.dice.get_dice_image(self.dice.first_value)
+        second_dice_image = self.dice.get_dice_image(self.dice.second_value)
+        self.screen.blit(first_dice_image, 
+                         (200 - first_dice_image.get_height() / 2, 
+                          const.GAME_HEIGHT / 2 - first_dice_image.get_height() / 2))
+        self.screen.blit(second_dice_image, 
+                         (400 - second_dice_image.get_height() / 2, 
+                          const.GAME_HEIGHT / 2 - second_dice_image.get_height() / 2))
 
     def run(self):
         running = True

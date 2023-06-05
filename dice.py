@@ -8,8 +8,8 @@ class Dice:
     def __init__(self) -> None:
         self.init_dice_images()
         self.init_dice_roll_images()
-        self.value = 1
-        self.is_rolling = False
+        self.first_value = 1
+        self.second_value = 1
 
     def init_dice_images(self):
         self.dice_images = [ 
@@ -35,19 +35,33 @@ class Dice:
         for dice_index in range(1, 8):
             time.sleep(0.1)
             rolling_dice = self.dice_roll_images[dice_index]
-            screen.blit(rolling_dice, (const.GAME_WIDTH / 2 - rolling_dice.get_width() / 2, const.GAME_HEIGHT / 2 - rolling_dice.get_height() / 2))
+            
+            screen.blit(
+                rolling_dice,  
+                (200 - rolling_dice.get_height() / 2, 
+                const.GAME_HEIGHT / 2 - rolling_dice.get_height() / 2))
+            
+            screen.blit(rolling_dice, 
+                (400 - rolling_dice.get_height() / 2, 
+                const.GAME_HEIGHT / 2 - rolling_dice.get_height() / 2))
+
+            
             pygame.display.update()
         
-        self.value = random.randint(1, 6)
-        dice_image = self.dice_images[self.value-1]
-        screen.blit(dice_image, (const.GAME_WIDTH / 2 - dice_image.get_width() / 2, const.GAME_HEIGHT / 2 - dice_image.get_height() / 2))
+        self.first_value = random.randint(1, 6)
+        self.second_value = random.randint(1, 6)
+        first_dice_image = self.dice_images[self.first_value-1]
+        second_dice_image = self.dice_images[self.second_value-1]
+        screen.blit(first_dice_image, 
+            (200 - first_dice_image.get_height() / 2, 
+            const.GAME_HEIGHT / 2 - first_dice_image.get_height() / 2))
+        
+        screen.blit(
+            second_dice_image, 
+            (400 - second_dice_image.get_height() / 2, 
+            const.GAME_HEIGHT / 2 - second_dice_image.get_height() / 2))
 
-    def determine_dice(self):
-        if(self.is_rolling):
-            #dice_image = 
-            return self.dice_roll_images[self.value - 1]
-            #screen.blit(dice_image, (const.GAME_WIDTH / 2 - dice_image.get_width() / 2, const.GAME_HEIGHT / 2 - dice_image.get_height() / 2))
-        else:    
-            #dice_image = 
-            return self.dice_images[self.value - 1]
-            #screen.blit(dice_image, (const.GAME_WIDTH / 2 - dice_image.get_width() / 2, const.GAME_HEIGHT / 2 - dice_image.get_height() / 2))
+
+    def get_dice_image(self, value):
+        return self.dice_images[value - 1]
+ 
