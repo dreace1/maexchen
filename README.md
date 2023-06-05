@@ -29,3 +29,11 @@ Leider war es anfangs nicht so trivial die Library zu verwenden. Deswegen ist de
 
 ### Frontend
 Wenn man das Spiel startet landet man direkt im Spiel, um zu Würfeln muss die Leertaste gedrückt werden. Daraufhin startet eine Animation und es werden zwei Würfelergebnise angezeigt.
+
+### ToDo
+- Frontend mit Backend verbinden
+- Spiel starten Menu mit Spieler wahl (Name usw.)
+- Refactoring
+- Spiel Flow: Runden, Wechsel des Spielers
+- Animation des Würfelns ggf. noch verbessern
+- Unit Testing
