@@ -17,6 +17,8 @@ class Maexchen():
         self.screen = pygame.display.set_mode((const.GAME_WIDTH, const.GAME_HEIGHT))
         self.screen.blit(self.background_image, (0, 0))
         self.clock = pygame.time.Clock()
+        font = pygame.font.Font(pygame.font.get_default_font(), 20)
+        self.roll_message = font.render("Press SPACEBAR to start rolling.", True, (0, 0, 0))
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -30,7 +32,10 @@ class Maexchen():
 
     def draw(self):
         self.screen.blit(self.background_image, (0, 0))
-        self.dice.blit_dices(self.screen, self.dice.get_dice_image(self.dice.first_value), self.dice.get_dice_image(self.dice.second_value))
+        self.screen.blit(self.roll_message, (140, 250))
+        self.dice.blit_dices(self.screen, 
+                             self.dice.get_dice_image(self.dice.first_value), 
+                             self.dice.get_dice_image(self.dice.second_value))
         pygame.display.update()
 
     def run(self):
