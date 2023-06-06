@@ -15,6 +15,16 @@ pip install pygame
 cd maexchen
 ```
 
+## Run 
+### Frontend
+```shell
+python maexchen_view.py
+```
+### Backend
+```shell
+python maexchen_logic.py
+```
+
 ## Dokumentation (German):
 Als Projekt wurde von uns das Würfelspiel [Maexchen](https://de.wikipedia.org/wiki/Mäxchen) ausgewählt.
 
@@ -29,6 +39,9 @@ Leider war es anfangs nicht so trivial die Library zu verwenden. Deswegen ist de
 
 ### Frontend
 Wenn man das Spiel startet landet man direkt im Spiel, um zu Würfeln muss die Leertaste gedrückt werden. Daraufhin startet eine Animation und es werden zwei Würfelergebnise angezeigt.
+
+### Modul Aufteilung
+Frontend Module sind mit den Suffix `_view` und Backend Module mit dem Suffix `logic` aufgeteilt.
 
 ### ToDo
 - Frontend mit Backend verbinden
