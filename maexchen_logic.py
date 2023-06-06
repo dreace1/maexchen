@@ -19,9 +19,10 @@ class Maexchen():
             is_reveal = self.__prompt_believe()
             
             if is_reveal:
-                pass
+                break
                 #__prompt_reveal()
                 #playagain?
+
 
     def __roll_dice(self):
         print("You rolled ", self.__logic.roll_dice())

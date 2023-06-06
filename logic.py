@@ -1,4 +1,4 @@
-from dice import Dice
+from dice_logic import Dice
 
 class Logic:
     __last_dice = Dice()
