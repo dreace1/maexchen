@@ -1,5 +1,4 @@
 import pygame
-import random
 from dice_view import Dice
 import const
 
