@@ -1,6 +1,6 @@
 import pygame
 import random
-from dice import Dice
+from dice_view import Dice
 import const
 
 pygame.init()
