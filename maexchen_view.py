@@ -2,8 +2,7 @@ import pygame
 from dice_view import Dice
 import const
 
-pygame.init()
-pygame.display.set_caption("Mäxchen")
+
 
 class Maexchen():
     
@@ -12,6 +11,8 @@ class Maexchen():
         self.dice = Dice()
 
     def init_game_screen(self):
+        pygame.init()
+        pygame.display.set_caption("Mäxchen")
         self.background_image = pygame.image.load("assets/background.png")
         self.screen = pygame.display.set_mode((const.GAME_WIDTH, const.GAME_HEIGHT))
         self.screen.blit(self.background_image, (0, 0))
